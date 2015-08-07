@@ -1,0 +1,240 @@
+/* posts scss */
+
+
+
+.posts-list
+{
+	padding-top: 2.5em;
+    margin-bottom: 5em;
+}
+
+.post
+{
+	width: 100%;
+
+	margin-top: 2.5em;
+    margin-bottom: 2.5em;
+
+    
+    min-height: 9em;
+
+	border: 1px solid $post-border;
+
+	overflow: hidden;
+
+	word-break: break-word;
+}
+
+
+.post .post-asset
+{
+	position: relative;
+    z-index: 1;
+}
+
+.post .post-asset .post-image,
+.post .post-asset .post-video-poster
+{
+	display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    z-index: 1;
+}
+
+.posts-list .post .post-asset .post-image
+{
+	cursor: pointer;
+}
+
+.post .post-asset .play
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+    height: 100%;
+
+	padding: 0px;
+    margin: 0px;
+
+	z-index: 2;
+
+	cursor: default;
+}
+
+.post .post-asset .play .icon
+{
+	padding: 0px;
+    margin: 0px;
+
+    font-size: 10.5em;
+    color: $white;
+}
+
+.post .post-asset .play .icon:before
+{
+	margin: 0px;
+	cursor: pointer;
+}
+
+.post .post-box
+{
+	margin: 2.5em;
+}
+
+.post .reply-box
+{
+	padding: 2.5em;
+}
+
+.post .post-box-bottom
+{
+	margin-left: 8.5em;
+}
+
+.post .post-box
+{
+	background-color: $white;
+}
+
+.post .reply-box
+{
+	background-color: #F9FAFC;
+	border-top: 1px solid #EFF0F2;
+}
+
+.post .button
+{
+	padding: 0px;
+	font-size: 1em;
+	vertical-align: top;
+    color: $post-button;
+    margin-top: 0.15em;	
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background: none;
+}
+
+.post .avatar-thumb
+{
+	position: relative;
+    margin-bottom: -4em;
+}
+
+.post .post-contents
+{
+	margin-left: 6em;
+}
+
+.post .time
+{
+	padding-left: 0.5em;
+	font-size: 1.5em;
+	color: $post-button;
+}
+.post .name
+{
+	font-size: 1.5em;
+	color: #404549;
+}
+
+.post .comment
+{
+	font-size: 1.6em;
+	color: $post-font-main;
+	padding-top: 0.5em;
+    line-height: 1.5em;
+}
+
+.post .comment a
+{
+	color: $post-font;
+	text-decoration: none;
+	outline: none;
+}
+
+.post .comment a:active,
+.post .comment a:focus,
+.post .comment a:hover
+{
+	color: #CBCED8;
+	text-decoration: underline;
+}
+
+.post .expand.button,
+.post .collapse.button
+{
+	padding-left: 0px;
+}
+
+.post .expand.button .icon,
+.post .collapse.button .icon
+{
+	font-size: 0.8em;
+    margin-left: 0.8em;
+    top: -0.05em;
+    position: relative;
+}
+
+.post .expand.button span,
+.post .collapse.button span
+{
+	font-size: 1.25em;
+}
+
+.post .reply-box input
+{
+	width: 100%;
+    height: 2.7em;
+    background: $white;
+    color: $post-font;
+    outline: none;
+    border: 1px solid $post-border;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 4px;
+    font-size: 1.5em;
+}
+
+.post .reply-box .placeholdersjs
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+.post .reply-box input::-webkit-input-placeholder
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input:-moz-placeholder
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input::-moz-placeholder {
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input:-ms-input-placeholder {  
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .button .icon
+{
+	font-size: 1.45em;
+}
+
+.post .button .text
+{
+	vertical-align: middle;
+}
