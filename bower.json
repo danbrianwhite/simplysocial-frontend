@@ -1,0 +1,24 @@
+{
+  "name": "SimplySocial",
+  "version": "0.0.0",
+  "authors": [
+    "danbrianwhite <danbrianwhite@gmail.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/_lib"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+  }
+}

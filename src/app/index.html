@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <title>SimplySocial</title>
+
+		<meta charset="UTF-8">
+		<meta name="description" content="SimplySocial - Social Network Platform">
+		<meta name="keywords" content="Simply, Social, Social Network">
+		<meta name="author" content="Dan White">
+
+		<link rel="icon" type="image/png" href="./assets/favicons/icon.png">
+	    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+
+	    
+	    <!-- 
+	         Note: TypeKit pulls in the required fonts for the site
+	  	     -localhost and dl.dropboxusercontent.com have been whitelisted
+	  	     -running from another location will prevent the fonts from loading
+	  	      but fallback fonts will still be used
+	  	-->
+
+	  	<script src="//use.typekit.net/rue1cml.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		
+		<script>
+
+			var browserCheck = function()
+			{
+				var browser = "";
+				if(/safari/.test(navigator.userAgent.toLowerCase()) && !/chrome/.test(navigator.userAgent.toLowerCase()))
+				{
+					browser = 'safari'
+				}
+				else if(/chrome/.test(navigator.userAgent.toLowerCase()))
+				{
+					browser = 'chrome';
+				}
+				else if(/firefox/.test(navigator.userAgent.toLowerCase()))
+				{
+					browser = 'firefox';
+				}
+
+				var html_dom = document.getElementsByTagName('html')[0];
+				html_dom.className = html_dom.className + ' ' + browser;
+			};
+
+			browserCheck();
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="container">
+		    Loading...
+		</div>
+
+	    <script src="js/lib.min.js"></script>
+	  	<script src="js/script.min.js"></script>
+
+	</body>
+</html>    

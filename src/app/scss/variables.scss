@@ -1,0 +1,123 @@
+/* variables */
+
+
+
+/* begin: responsive sizes */
+
+$column-width: 575px;
+$header-break-sm: 700px;
+$header-break-xs: 500px;
+$modal-image-width: 1075px;
+
+/* end: responsive sizes */
+
+
+/* begin: font size */
+$font-size: 10px;
+/* end: font size */
+
+/* begin: theme colors */
+
+/* greens */
+$green-1: #007F60;
+$green-2: #00B286;
+$green-3: #00CC99;
+
+/* grays */
+
+$gray-1: #262728;
+
+$gray-3: #697074;
+$gray-4: #B5BDC1;
+
+$gray-8: #DEE1E5;
+$gray-7: #BEC3CC;
+$gray-9: #43464B;
+
+
+/* basic colors */
+
+$white: #FFFFFF;
+
+/* end: colors */
+
+
+
+/* begin: logo */
+
+$simply: $gray-3;
+$social: $gray-4;
+
+/* end: logo */
+
+/* begin: loader */
+
+$loader: $green-1;
+
+/*end: loader */
+
+
+
+/* begin: header */
+
+$header-font: $gray-3;
+
+$header-icon: $green-3;
+$header-search-font: $gray-4;
+$header-search-box: $gray-9;
+
+$header-background: $gray-1;
+$header-dropdown-border: $gray-8;
+
+/* end: header */
+
+
+
+/* begin: footer */
+
+$footer-link: $green-2;
+$footer-copyright: $gray-3;
+$footer-border: $gray-8;
+
+/* end: footer */
+
+
+
+/* begin: hero */
+
+$background-hero: $green-2;
+$placeholder-hero: rgba(255,255,255,0.6);
+
+/* end: hero */
+
+
+
+/* begin: post */
+
+$post-font: $gray-4;
+$post-font-main: $gray-3;
+$post-button: $gray-4;
+$post-border: $gray-8;
+
+/* end: post */
+
+
+/* begin: settings */
+
+$settings-font: $gray-4;
+$settings-font-main: $gray-3;
+
+$placeholder-reply: $gray-4;
+$placeholder-icon-input: $gray-4;
+$settings-change: $gray-4;
+$settings-border: $gray-4;
+$settings-border-bottom: $gray-8;
+$settings-input-border: $gray-4;
+
+$icon-input: $green-3;
+
+
+/* end: settings */
+
+
+

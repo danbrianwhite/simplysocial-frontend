@@ -1,0 +1,297 @@
+/* header */
+
+.header-wrapper
+{
+	position: fixed;
+	top: -10em;
+	left: -25%;
+	padding-left: 25%;
+	width: 200%;
+	padding-top: 10em;
+	background: $header-background;
+	
+	z-index: 3;
+}
+
+.header-wrapper-relative 
+{
+    position: relative;
+    top: 0px;
+    padding-top: 0px;
+}
+
+
+.header
+{
+	background: $header-background;
+	color: $header-font;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 6.25em;
+	padding-right: 6.25em;
+
+	width: 50%;
+
+}
+
+
+.header .logo
+{
+    display: inline-block;
+    margin-top: 0.4em;
+}
+
+.header-logo .icon
+{
+	color: $header-icon;
+	font-size: 2.05em;
+	margin-right: 0.05em;
+}
+
+
+.header-logo .simply
+{
+	color: $simply;
+}
+
+.header-logo .social
+{
+	color: $social;
+}
+
+.header-logo .text
+{
+    font-size: 1.35em;
+    vertical-align: top;
+    top: 0.35em;
+    position: relative;
+}
+
+.header .button
+{
+	border: none;
+	cursor: pointer;
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+
+	font-size: 1.4em;
+
+	background: none;
+	outline: none;
+}
+
+.header .message-new
+{
+    display: inline-block;
+	font-size: 2.25em;
+}
+
+.header .message-new .button
+{
+    padding-top: 0.1em;
+    padding-right: 0.1em;
+}
+
+.header .message-new .icon
+{
+    color: $header-icon;
+    vertical-align: top;
+}
+
+.header .search
+{
+	border: 1px solid $header-search-box;
+	border-radius: 3px;
+
+	color: $header-search-box;
+
+	margin-top: 0.5em;
+
+	margin-left: 1.5em;
+	margin-right: 2.3em;
+}
+
+.header .search .input
+{
+	outline: none;
+	background: none;
+	color: $header-search-font;
+	border: none;
+
+	font-size: 1.4em;
+
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+
+	width: 10em;
+	height: 1em;
+}
+
+.header .search .button
+{
+	color: $header-font;
+	font-size: 2em;
+	height: 1.4em;
+	width: 1.4em;
+
+	margin-right: 0.1em;
+
+	outline: none;
+}
+
+.header .search .button .icon
+{
+	font-size: 1.0em;
+    top: -0.1em;
+    position: relative;
+}
+
+.header .search .button:focus,
+.header .search .button:hover
+{
+	color: $header-search-font;
+}
+
+.header .user
+{
+	margin-top: 0.5em;
+	cursor: default;
+	position: relative;
+
+	height: 5em;
+    margin-bottom: -2em;
+}
+
+.header .user .button
+{
+	font-size: 1em;
+	outline: none;
+}
+
+.header .user .button .icon
+{
+	color: #4A4F53;
+	margin-top: 1.1em;
+    font-size: 0.9em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+
+    -webkit-font-smoothing: auto;
+}
+
+.header .user .dropdown 
+{
+    position: absolute;
+    top: 3.5em;
+    right: -0.8em;
+}
+
+.header .user .dropdown .icon
+{
+    position: absolute;
+    top: -0.35em;
+    right: 0.45em;
+
+    font-size: 1.8em;
+    color: #F4F5F7;
+ 
+    z-index: 0;
+
+    cursor: default;
+}
+
+.header .user .dropdown .dropdown-inner
+{
+	position: absolute;
+    z-index: 10;
+    top: 0.5em;
+    right: 0em;
+    background: #F4F5F7;
+    border-radius: 4px;
+    min-width: 9.5em;
+}
+
+.header .user .dropdown .dropdown-inner .option
+{
+    display: block;
+	padding-top: 0.6em;
+	padding-bottom: 0.5em;
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+
+	font-size: 1.3em;
+	color: $header-font;
+	border-bottom: 1px solid $header-dropdown-border;
+
+	position: relative;
+
+	z-index: 1;
+
+	text-decoration: none;
+
+	outline: none;
+	cursor: pointer;
+}
+
+.header .user .dropdown .dropdown-inner .option:first-child
+{
+	padding-top: 0.7em;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.header .user .dropdown .dropdown-inner .option:last-child
+{
+	border-bottom: none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.header .user .dropdown .option:focus,
+.header .user .dropdown .option:hover
+{
+	background-color: #FCFCFD;
+}
+
+
+/* header responsive */
+
+@media (max-width: $header-break-xs) {
+	.header
+	{
+	    padding: 1em 3.25em;
+	}
+ 
+
+  	.header .search .input
+	{
+		width: 5em;
+	}
+
+	.header .simply,
+	.header .social
+	{
+		display: none;
+	}
+}
+
+
+@media (min-width: ($header-break-xs+1)) and (max-width: $header-break-sm) {
+
+	.header
+	{
+	    padding: 1em 4em;
+	}
+
+  	.header .simply,
+  	.header .social
+  	{
+  		display: none;
+	}
+}

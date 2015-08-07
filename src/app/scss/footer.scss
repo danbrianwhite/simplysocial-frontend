@@ -1,0 +1,36 @@
+/* footer */
+
+.footer 
+{
+    border-top: 1px solid $footer-border;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    text-align: center;
+
+    font-size: 1.15em;
+    font-weight: 600;
+
+    z-index: 1;
+
+    > div,
+    > a
+	{
+		display: inline-block;
+		text-transform: uppercase;
+
+		padding-left: 1em;
+	    padding-right: 1em;
+	}
+
+	.footer-link
+	{
+		color: $footer-link;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.footer-copyright
+	{
+		color: $footer-copyright;
+	}
+}

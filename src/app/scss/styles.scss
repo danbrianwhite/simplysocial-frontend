@@ -1,0 +1,873 @@
+/* SCSS styles */
+
+/* page loader */
+
+
+.page-loader
+{
+	background: $loader;
+	height: 2px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 90%;
+	z-index: 4;
+
+	display: none;
+}
+
+
+/* some css browser fixes */
+
+html, body
+{
+	font-size: $font-size;
+
+	padding: 0px;
+	margin: 0px;
+
+	background-color: $white;
+	position: relative;
+	overflow-x: hidden;
+}
+
+html, body, div, p, span, input, textarea
+{	
+	font-family: 'proxima-nova', 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+textarea
+{
+	overflow: auto;
+}
+
+
+body
+{
+	margin-top: -10em;
+	margin-left: -10em;
+	margin-right: -10em;
+}
+
+.safari body
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.body
+{
+	background-color: $white;
+	z-index: 1;
+}
+
+
+
+.page
+{
+	background-color: $white;	
+
+	padding-top: 10em;
+	padding-left: 10em;
+	padding-right: 10em;
+
+	z-index: 1;
+}
+
+.safari .page
+{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+
+
+/* clear */
+
+.clear-pmb
+{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+.clear-pm
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.clear-p
+{
+	padding: 0px;
+}
+
+.clear-m
+{
+	margin: 0px;
+}
+
+.clear-b
+{
+	border: 0px;
+}
+
+
+.clear-float:before, .clear-float:after {
+    content: "";
+    display: table;
+}
+
+.clear-float:after {
+    clear: both;
+}
+
+.clear-float {
+    *zoom: 1;
+}
+
+
+/* margin sizes */
+
+.margin-top
+{
+	margin-top: 0.8em;
+}
+
+.margin-bottom
+{
+	margin-bottom: 0.6em;
+}
+
+/* padding */
+
+
+.padding
+{
+	padding: 2em;
+}
+
+.padding-extra-lr
+{
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+
+/* box size */
+
+.box-sizing-border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.box-sizing-content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* css */
+
+.rounded-corners
+{
+	border-radius: 4px;
+}
+
+.gray
+{
+	background-color: rgb(222, 225, 230);
+}
+
+.color
+{
+	color: rgb(113, 118, 124);
+}
+
+.vertical-middle
+{
+	position: relative;
+	top: 50%;
+
+	-webkit-transform: translateY(-50%);  -webkit-transform-style: preserve-3d;
+        -ms-transform: translateY(-50%);      -ms-transform-style: preserve-3d;
+            transform: translateY(-50%);          transform-style: preserve-3d;
+}
+
+.horizontal-center
+{
+	margin: auto;
+}
+
+.float-left
+{
+	float: left;
+}
+
+.float-right
+{
+	float: right;
+}
+
+
+/* icon css */
+.icon
+{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+    vertical-align: middle;
+}
+
+/* buttons */
+
+.button-green
+{
+	border-radius: 3px;
+	background: rgb(1, 178, 134);
+	color: rgb(256, 256, 256);
+	font-weight: 600;
+}
+
+.button-green:focus,
+.button-green:hover
+{
+	outline: none;
+	background: rgb(2, 195, 147);
+}
+
+.button-clear
+{
+	background: none;
+	color: rgb(173, 173, 173);
+}
+
+.button-clear:focus,
+.button-clear:hover
+{
+	color: rgb(137, 137, 137);
+}
+
+/* input */
+
+.input-padding
+{
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.input-rounded
+{
+	border-radius: 2px;
+}
+
+/* avatar */
+
+.avatar-user 
+{
+    border-radius: 4px;
+    overflow: hidden;
+    width: 3em;
+    height: 3em;
+}
+
+.avatar-user img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.avatar-thumb 
+{
+    border-radius: 4px;
+    overflow: hidden;
+    width: 4em;
+    height: 4em;
+}
+
+.avatar-thumb img
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* other */
+.hidden
+{
+	display: none;
+}
+
+.column
+{
+	max-width: $column-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-whole
+{
+	width: 100%;
+}
+
+@media (max-width: $column-width+(4*$font-size)) {
+
+  .column,
+  {
+  	padding-left: 1em;
+  	padding-right: 1em;
+  }
+
+  .hero .sort
+  {
+      padding-right: 1em;
+  }
+
+}
+
+.img-hero
+{
+    display: block;
+    min-width: 100%;
+}
+
+.hero
+{
+	position: relative;
+}
+
+.hero-links
+{
+	position: relative;
+}
+
+.hero-links-inner
+{
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.hero-link
+{
+	display: inline-block;
+    height: 3em;
+    text-transform: uppercase;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+
+    color: #BEC2CB;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.hero-link:first-child
+{
+	margin-left: 0px;
+}
+
+.hero-link:last-child
+{
+	margin-right: 0px;
+}
+
+.hero-link .text
+{
+    font-size: 1.35em;
+    font-weight: 800;
+    padding-bottom: 1em;
+}
+
+.hero-link.active
+{
+	color: $white;
+	border-bottom: 4px solid #00CC99;
+}
+
+.hero-link:focus,
+.hero-link:hover
+{
+	color: $white;
+}
+
+.hero-link.active:focus,
+.hero-link.active:hover
+{
+	border-bottom: 4px solid #00F0B4;
+}
+
+.hero-links .button
+{
+	border: none;
+	cursor: pointer;
+
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+
+
+	font-size: 1.0em;
+
+	background: none;
+	outline: none;
+
+	color: #808799;
+}
+
+.hero-links .button.active
+{
+	color: #C6CAD2;
+	cursor: default;
+}
+
+.hero-links .sort
+{
+	cursor: default;
+}
+
+.hero-links .sort .button:focus,
+.hero-links .sort .button:hover
+{
+	color: $white;
+}
+.hero-links .sort .button.active:focus,
+.hero-links .sort .button.active:hover
+{
+	color: $gray-7;
+
+}
+
+
+.hero-links .sort .button:first-child
+{
+	margin-left: -0.5px;
+}
+
+.hero-links .sort .button:last-child
+{
+	margin-right: -0.5em;
+}
+
+.hero-links .sort .button .icon
+{
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: none;
+}
+
+
+
+.hero-inner
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.hero-message-new
+{
+	max-width: $column-width;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+
+    padding: 2.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+
+    margin-top: -1em;
+
+}
+
+.hero-message-new-bg
+{
+	background: $background-hero;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.75;
+
+	z-index: -1;
+}
+
+.hero-message-new textarea
+{
+	resize: none;
+	width: 100%;
+	height: 2.4em;
+
+	background: none;
+	border: none;
+	color: $white;
+	outline: none;
+
+	padding-top: 0.6em;
+
+	font-size: 3em;
+}
+
+.hero-message-new .placeholdersjs
+{
+   color: $placeholder-hero;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;	
+}
+
+.hero-message-new textarea::-webkit-input-placeholder
+{
+   color: $placeholder-hero;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.hero-message-new textarea:-moz-placeholder
+{
+   color: $placeholder-hero;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.hero-message-new textarea::-moz-placeholder {
+   color: $placeholder-hero;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.hero-message-new textarea:-ms-input-placeholder {  
+   color: $placeholder-hero;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+
+.hero-message-new-footer button.modal-button:first-child {
+    padding-left: 0px;
+}
+
+.hero-message-new-footer button:first-child .icon:before {
+    margin-left: 0px;
+}
+
+
+.hero-message-new .button
+{
+	border: none;
+	cursor: pointer;
+
+	padding-top: 0.65em;
+	padding-bottom: 0.65em;
+	padding-left: 1.6em;
+	padding-right: 1.6em;
+
+	font-size: 1.5em;
+}
+
+.hero-message-new .button:focus
+{
+	outline: none;
+}
+
+.hero-message-new .button .icon
+{
+	font-size: 1.45em;
+}
+
+.hero-message-new .button .text
+{
+	vertical-align: middle;
+}
+
+.hero-message-new .button-clear
+{
+    padding-top: 0.4em;
+    padding-bottom: 0px;
+
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+
+    color: $placeholder-hero;
+}
+
+.hero-message-new .button-clear:first-child
+{
+	padding-left: 0px;
+}
+
+.hero-message-new .button-clear:last-child
+{
+	padding-right: 0px;
+}
+
+.posts-list
+{
+	padding-top: 2.5em;
+    margin-bottom: 5em;
+}
+
+.post
+{
+	width: 100%;
+
+	margin-top: 2.5em;
+    margin-bottom: 2.5em;
+
+    
+    min-height: 9em;
+
+	border: 1px solid $post-border;
+
+	overflow: hidden;
+
+	word-break: break-word;
+}
+
+
+.post .post-asset
+{
+	position: relative;
+    z-index: 1;
+}
+
+.post .post-asset .post-image,
+.post .post-asset .post-video-poster
+{
+	display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    z-index: 1;
+}
+
+.posts-list .post .post-asset .post-image
+{
+	cursor: pointer;
+}
+
+.post .post-asset .play
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+    height: 100%;
+
+	padding: 0px;
+    margin: 0px;
+
+	z-index: 2;
+
+	cursor: default;
+}
+
+.post .post-asset .play .icon
+{
+	padding: 0px;
+    margin: 0px;
+
+    font-size: 10.5em;
+    color: $white;
+}
+
+.post .post-asset .play .icon:before
+{
+	margin: 0px;
+	cursor: pointer;
+}
+
+.post .post-box
+{
+	margin: 2.5em;
+}
+
+.post .reply-box
+{
+	padding: 2.5em;
+}
+
+.post .post-box-bottom
+{
+	margin-left: 8.5em;
+}
+
+.post .post-box
+{
+	background-color: $white;
+}
+
+.post .reply-box
+{
+	background-color: #F9FAFC;
+	border-top: 1px solid #EFF0F2;
+}
+
+.post .button
+{
+	padding: 0px;
+	font-size: 1em;
+	vertical-align: top;
+    color: $post-button;
+    margin-top: 0.15em;	
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background: none;
+}
+
+.post .avatar-thumb
+{
+	position: relative;
+    margin-bottom: -4em;
+}
+
+.post .post-contents
+{
+	margin-left: 6em;
+}
+
+.post .time
+{
+	padding-left: 0.5em;
+	font-size: 1.5em;
+	color: $post-button;
+}
+.post .name
+{
+	font-size: 1.5em;
+	color: #404549;
+}
+
+.post .comment
+{
+	font-size: 1.6em;
+	color: $post-font-main;
+	padding-top: 0.5em;
+    line-height: 1.5em;
+}
+
+.post .comment a
+{
+	color: $post-font;
+	text-decoration: none;
+	outline: none;
+}
+
+.post .comment a:active,
+.post .comment a:focus,
+.post .comment a:hover
+{
+	color: #CBCED8;
+	text-decoration: underline;
+}
+
+.post .expand.button,
+.post .collapse.button
+{
+	padding-left: 0px;
+}
+
+.post .expand.button .icon,
+.post .collapse.button .icon
+{
+	font-size: 0.8em;
+    margin-left: 0.8em;
+    top: -0.05em;
+    position: relative;
+}
+
+.post .expand.button span,
+.post .collapse.button span
+{
+	font-size: 1.25em;
+}
+
+.post .reply-box input
+{
+	width: 100%;
+    height: 2.7em;
+    background: $white;
+    color: $post-font;
+    outline: none;
+    border: 1px solid $post-border;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 4px;
+    font-size: 1.5em;
+}
+
+.post .reply-box .placeholdersjs
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+.post .reply-box input::-webkit-input-placeholder
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input:-moz-placeholder
+{
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input::-moz-placeholder {
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .reply-box input:-ms-input-placeholder {  
+   color: $placeholder-reply;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.post .button .icon
+{
+	font-size: 1.45em;
+}
+
+.post .button .text
+{
+	vertical-align: middle;
+}
+
+
+.button
+{
+	border: none;
+	cursor: pointer;
+
+}
+
+.button:focus
+{
+	outline: none;
+}
+
+.transition-1000
+{
+	transition: all 1000ms;
+}
+
+.transition-1000-cascade,
+.transition-1000-cascade > *
+{
+	transition: all 1000ms;
+}

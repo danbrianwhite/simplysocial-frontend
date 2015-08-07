@@ -1,0 +1,48 @@
+/* columnizer */
+
+.tile-column
+{
+
+	display: inline-block;
+
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+
+    text-align: left;
+
+    vertical-align: top;
+    max-width: 575px;
+}
+
+.tile-column.oneColumn
+{
+	padding: 0px;
+}
+
+
+.columnized
+{
+	width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    text-align: center;
+}
+
+
+
+.columnized:before, .columnized:after {
+    content: "";
+    display: table;
+}
+
+.columnized:after {
+    clear: both;
+}
+
+.columnized {
+    *zoom: 1;
+}

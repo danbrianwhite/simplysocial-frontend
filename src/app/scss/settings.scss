@@ -1,0 +1,360 @@
+/* settings */
+
+.settings
+{
+	margin-top: 4em;
+}
+
+.settings .title
+{
+	font-size: 3.2em;
+    color: #3D444E;
+}
+
+.settings .block 
+{
+    padding-top: 4.5em;
+    border-bottom: 1px solid $settings-border-bottom;
+    padding-bottom: 5em;
+    position: relative;
+}
+
+.settings .block:last-child
+{
+	border-bottom: 0px;
+	padding-bottom: 10em;
+}
+
+.settings .block .subtitle
+{
+	color: $settings-font-main;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.settings .block .settings-account 
+{
+    margin-top: 2.2em;
+}
+
+.settings .block .settings-account-info
+{
+    margin-left: 12em;
+    margin-right: 9em;
+    position: relative;
+}
+
+.settings .block .settings-account-info .icon 
+{
+	position: absolute;
+    top: 0.3em;
+    left: 0.4em;
+
+    font-size: 1.8em;
+    color: #BFC3CE;
+
+    z-index: 0;
+}
+
+.settings .block .settings-account .avatar-thumb
+{
+    border-radius: 4px;
+    overflow: hidden;
+    width: 8.5em;
+    height: 8.5em;
+}
+
+
+.settings .icon-input
+{
+	position: relative;
+	width: 100%;
+
+	border: 1px solid $settings-input-border;
+    border-radius: 4px;
+    color: #43464B;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    margin-left: 1.5em;
+    margin-right: 2.3em;
+
+    overflow: hidden;
+}
+
+.settings .icon-input .input
+{
+	width: 100%;
+    height: 2.1em;
+    padding-left: 2.3em;
+    padding-right: 1.2em;
+    border: 0px;
+    font-size: 1.8em;
+    z-index: 1;
+    background: none;
+    position: relative;
+
+    color: #3C454C;
+
+    outline: none;
+}
+
+.settings .icon-input .input.password,
+.settings .icon-input .input.password-retype
+{
+    padding-right: 5.2em;
+}
+
+
+.settings .icon-input .placeholdersjs
+{
+   color: $placeholder-icon-input;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+.settings .icon-input .input::-webkit-input-placeholder
+{
+   color: $placeholder-icon-input;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.settings .icon-input .input:-moz-placeholder
+{
+   color: $placeholder-icon-input;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.settings .icon-input .input::-moz-placeholder {
+   color: $placeholder-icon-input;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+.settings .icon-input .input:-ms-input-placeholder {  
+   color: $placeholder-icon-input;
+   font-family: 'proxima-nova', 'Open Sans', sans-serif;
+}
+
+
+.settings .icon-input:first-child
+{
+	margin-top: 0px;
+}
+
+.settings .icon-input:last-child
+{
+	margin-bottom: 0px;
+}
+
+
+.settings .password-change 
+{
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 6.5em;
+    font-size: 1.2em;
+    background: none;
+    color: $settings-change;
+}
+
+.settings .password-change:focus,
+.settings .password-change:hover
+{
+	color: #878DA1;
+}
+
+
+.settings .avatar-wrapper .avatar-change
+{
+	width: 100%;
+    border: 1px solid $settings-input-border;
+    background: none;
+    border-radius: 4px;
+    color: $settings-change;
+    padding: 0.35em;
+    font-size: 1.2em;
+    margin-top: 0.8em;
+}
+
+
+.settings .avatar-change:focus,
+.settings .avatar-change:hover
+{
+	color: #878DA1;
+}
+
+
+.icon-input.updated 
+{
+    border-color: $icon-input;
+}
+
+.settings .icon-input.updated .password-change
+{
+    color: rgba(0, 205, 153, 0);
+}
+
+.settings .icon-input.updated .icon,
+.settings .icon-input.updated .input
+{
+    color: $icon-input;
+}
+
+.settings .settings-privacy 
+{
+    padding-top: 3em;
+}
+
+.settings label 
+{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .option
+{
+	padding-top: 2em;
+	outline: none;
+}
+
+
+.settings .option:last-child
+{
+	padding-bottom: 2em;
+}
+
+.settings .option input[type=checkbox],
+.settings .option input[type=radio] 
+{
+    display: none;
+}
+
+.settings .option label span
+{
+    font-size: 1.6em;
+    vertical-align: middle;
+    color: $settings-font-main;
+}
+
+.settings .option.checkbox label:before,
+.settings .option.radio label:before 
+{
+	content: "";
+    display: inline-block;
+    color: #01B286;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 1.1em;
+    font-family: "fontello";
+    width: 1.2em;
+    height: 1.1em;
+    border-radius: 1em;
+    background-color: $white;
+    border: 1px solid #BDC4CE;
+    padding-top: 0.1em;
+
+    margin-right: 1.4em;
+    vertical-align: middle;
+}
+
+.settings .option:focus label:before 
+{
+    box-shadow: 1px 1px 8px #343434;
+}
+
+.chrome .settings .option.checkbox label:before,
+.firefox .settings .option.checkbox label:before,
+.safari .settings .option.checkbox label:before,
+.chrome .settings .option.radio label:before,
+.firefox .settings .option.radio label:before,
+.safari .settings .option.radio label:before
+{
+	line-height: 1em;
+}
+
+
+.settings .option.checkbox input[type=checkbox]:checked + label:before,
+.settings .option.radio input[type=radio]:checked + label:before
+{
+    content: "\E810";
+
+}
+
+
+.settings .option.toggle
+{
+	padding-bottom: 2em;
+}
+
+
+.settings .option.toggle label:before 
+{
+    content: "\E810";
+    display: inline-block;
+    color: $white;
+    font-size: 2.8em;
+    text-align: center;
+    line-height: 1em;
+    font-family: "fontello";
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 5em;
+    margin-right: 1em;
+    vertical-align: middle;
+
+    padding-left: 0em;
+    padding-right: 0.9em;
+    background-color: #AEB0B7;
+    border: 0.05em solid #AEB0B7;
+    transition: padding 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+
+    float: left;
+}
+
+.chrome .settings .option.toggle label:before,
+.firefox .settings .option.toggle label:before,
+.safari .settings .option.toggle label:before
+{
+	line-height: 0.9em;
+}
+
+.settings .option.toggle input[type=checkbox]:checked + label:before,
+.settings .option.toggle input[type=radio]:checked + label:before
+{
+    padding-left: 0.9em;
+    padding-right: 0em;
+    background-color: #01B286;
+    border: 0.05em solid #01B286;
+}
+
+.settings .option.radio {
+    padding-bottom: 1em;
+    padding-top: 0em;
+}
+
+.settings .submit.button
+{
+    font-size: 1.4em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    border-radius: 4px;
+}
+
+
+/* responsive settings */
+
+
+@media (max-width: $header-break-xs) {
+
+    .settings .block .settings-account-info
+    {
+        margin-right: 5em;
+    }
+
+}
