@@ -1,8 +1,10 @@
 # simplysocial-frontend
 
-To Setup:
+Directions to setup and run the project are as follows:
 
-install node.js and NPM if you don't have them
+1. Install node.js and NPM if not already installed. 
+
+2. Once installed, enter the commands listed below in a command line window:
 
 	npm install
 	npm install -g bower
@@ -10,12 +12,8 @@ install node.js and NPM if you don't have them
 	npm install -g grunt-cli
 	grunt
 
+3. After running the commands, you should have the project installed and it will be ready to run. To run the application, enter the following command in a command line window:
+node server.js
 
-To Run
-After setting up and running grunt, run:
+4. In your browser, navigate to http://localhost:3000/
 
-  node server.js
-
-then in your browser, navigate to http://localhost:3000/
-
-(this is just basically setting up a simple webserver to host the files for the site)
