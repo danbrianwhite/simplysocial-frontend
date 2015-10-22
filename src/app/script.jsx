@@ -16,10 +16,10 @@ var Page = React.createClass({
     	var body;
     	switch(this.props.state.page)
     	{
-    		case 'home': 
+    		case 'home':
     			body = <Home data={this.props.homeData}/>;
     			break;
-    		case 'settings': 
+    		case 'settings':
     			body = <Settings data={this.props.settingsData}/>;
     			break;
     	}
@@ -142,7 +142,7 @@ var DropDownLink = React.createClass({
 	},
     render: function() {
         return (
-        	<a onClick={this.handleClick} href={this.props.data.link} className="option">{this.props.data.link}</a>
+        	<a onClick={this.handleClick} href={this.props.data.link} className="option">{this.props.data.text}</a>
         );
     }
 });
@@ -150,7 +150,6 @@ var DropDownLink = React.createClass({
 var UserDropDown = React.createClass({
 	getInitialState: function() {
 	    return {data: [
-	        {tag: 'settings', text: 'Settings'},
 	        {tag: 'followers', text: 'Followers'},
 	        {tag: 'following', text: 'Following'},
 	        {tag: 'settings', text: 'Settings', link:'settings'}
@@ -163,7 +162,7 @@ var UserDropDown = React.createClass({
     render: function() {
 
         var options = this.state.data.map(function (option, index) {
-        
+
         	if(typeof option.link !== 'undefined')
         	{
         		return (
@@ -176,7 +175,7 @@ var UserDropDown = React.createClass({
 		    		<div className="option" key={index}>{option.text}</div>
 		    	);
         	}
-	      
+
 	    },this);
 
         return (
@@ -289,7 +288,7 @@ var PostReplies = React.createClass({
     	else
     	{
     		return null;
-    	} 
+    	}
     }
 });
 
@@ -307,7 +306,7 @@ var PostComment = React.createClass({
 
 
 		var postContents = this.props.data.map(function (content, index) {
-    			
+
 			if (content.type === 'link')
 			{
 				return (
@@ -367,7 +366,7 @@ var PostImage = React.createClass({
     	{
     		return null;
     	}
-        
+
     }
 });
 
@@ -393,7 +392,7 @@ var PostVideo = React.createClass({
     	{
     		return null;
     	}
-        
+
     }
 });
 
@@ -437,7 +436,7 @@ var Posts = React.createClass({
 			}
 
 			var postClass = "post rounded-corners box-sizing-border-box type-"+postType;
-    		
+
     		var postOptions = (
     			<div className="post-options float-right">
 					<button className="reply button button-clear" tabIndex="1"><i className="icon icon-reply"></i></button>
@@ -453,7 +452,7 @@ var Posts = React.createClass({
 						{(homeData.list ? null : postOptions)}
 					</div>
 				) : null;
-        
+
 	        return(
 	        	<div className={postClass} key={index}>
 					<div className="post-box">
@@ -464,21 +463,21 @@ var Posts = React.createClass({
 								{(homeData.list ? postOptions : null)}
 							</div>
 							<div>
-							
+
 							<PostComment data={post.post.content} />
 
-								
+
 							</div>
-							
+
 						</div>
 					</div>
 					<PostImage data={post.post.imageAsset} postid={index}/>
 					<PostVideo data={post.post.videoAsset}/>
-					
+
 					{postBoxBottom}
 
 					<PostReplies data={post.replies}/>
-					
+
 				</div>
 		      );
 	    },this);
@@ -515,7 +514,7 @@ var HeroWithLinks = React.createClass({
 
 						<div className="hero-message-new-footer clear-float">
 
-			
+
 							<button className="button button-clear" tabIndex="1"><i className="icon icon-photo"></i> <span className="text">Add Photo</span></button>
 							<button className="button button-clear" tabIndex="1"><i className="icon icon-video"></i> <span className="text">Add Video</span></button>
 
@@ -586,7 +585,7 @@ var HeroLinks = React.createClass({
         return (
 			<div className="hero-links column">
 				<div className="hero-links-inner column-whole">
-					
+
 					{links}
 
 					<div className="sort float-right">
@@ -606,7 +605,7 @@ var HeroLinks = React.createClass({
 var HeroLink = React.createClass({
 	getInitialState: function() {
 	    return {
-	    	
+
 	    };
 	},
 	handleClick: function(e)
@@ -679,7 +678,7 @@ var Settings = React.createClass({
 								<button className="button avatar-change" tabIndex="1">change</button>
 							</div>
 							<div className="settings-account-info">
-								
+
 								<div className="user icon-input box-sizing-border-box">
 									<i className="icon icon-user"></i>
 									<input className="input name-box box-sizing-border-box" type="text" value={this.state.name} onChange={this.handleInputName} placeholder="Full Name"/>
@@ -688,7 +687,7 @@ var Settings = React.createClass({
 								<div className="email icon-input box-sizing-border-box">
 									<i className="icon icon-email"></i>
 									<input className="input email-box box-sizing-border-box" type="email" value={this.state.email} onChange={this.handleInputEmail} placeholder="Email"/>
-									
+
 								</div>
 
 								<div className="password icon-input box-sizing-border-box">
@@ -703,8 +702,8 @@ var Settings = React.createClass({
 									<input className="input password-box box-sizing-border-box" type="password" placeholder="Retype Password"/>
 									<button className="button password-change submit-btn" tabIndex="1">submit</button>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 
@@ -831,7 +830,7 @@ var MessageNewModal = React.createClass({
 						<div className="modal-body">
 							<textarea className="textarea clear-pmb margin-top margin-bottom input-rounded input-padding box-sizing-border-box" tabIndex="1"></textarea>
 						</div>
-						
+
 						<div className="modal-footer clear-float">
 							<button className="modal-button button-clear" tabIndex="1"><i className="icon icon-photo"></i> <span className="text">Add Photo</span></button>
 							<button className="modal-button button-clear" tabIndex="1"><i className="icon icon-video"></i> <span className="text">Add Video</span></button>
@@ -839,7 +838,7 @@ var MessageNewModal = React.createClass({
 						</div>
 					</div>
 					<div className="modal-close">
-						<button className="icon-close"></button> 
+						<button className="icon-close"></button>
 
 					</div>
 
@@ -901,7 +900,7 @@ var ImageDetailModal = React.createClass({
     	else
     	{
     		return (
-    		
+
 				<div className="image-detail-modal modalwrapper center hidden">
 
 					<div className="modal padding padding-extra-lr color vertical-middle horizontal-center box-sizing-border-box">
@@ -936,7 +935,7 @@ var ImageDetailModal = React.createClass({
 
 						</div>
 						<div className="modal-close">
-							<button className="icon-close"></button> 
+							<button className="icon-close"></button>
 
 						</div>
 
@@ -951,7 +950,7 @@ var ImageDetailModal = React.createClass({
 			);
     	}
 
-        
+
     }
 });
 
@@ -978,7 +977,7 @@ var hashChanged = function() {
 
 	var _view;
 
-    if ((window.location.hash).toLowerCase() === '#settings') 
+    if ((window.location.hash).toLowerCase() === '#settings')
     {
         _view = 'settings';
     }
@@ -996,7 +995,7 @@ window.onhashchange = hashChanged;
 /* render the app */
 var renderApp = function()
 {
-	React.render(<Page state={appState} homeData={homeData} settingsData={settingsData}/>, document.getElementById('container'));	
+	React.render(<Page state={appState} homeData={homeData} settingsData={settingsData}/>, document.getElementById('container'));
 };
 
 renderApp();
